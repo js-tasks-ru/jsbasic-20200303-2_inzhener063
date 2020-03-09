@@ -2,7 +2,7 @@
  * Эту функцию трогать не нужно
  */
 function print(text) {
-  console.log(text);
+	console.log(text);
 }
 
 /**
@@ -18,11 +18,11 @@ function isValid(name) {
 }
 
 function sayHello() {
-  const userName = prompt('Введите ваше имя');
+	const userName = prompt('Введите ваше имя');
 
-  if (isValid(userName)) {
-    print(`Welcome back, ${userName}!`);
-  } else {
-    print('Некорректное имя');
-  }
+	if (isValid(userName)) {
+	print(`Welcome back, ${userName}!`);
+	} else {
+	print('Некорректное имя');
+	}
 }
