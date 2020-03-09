@@ -5,9 +5,9 @@
  */
 
 function checkSpam(str) {
-  let lowerStr = str.toLowerCase();
+	let lowerStr = str.toLowerCase();
 
-  return lowerStr.includes('1xBet') || lowerStr.includes('XXX');
+	return lowerStr.includes('1xBet') || lowerStr.includes('XXX');
 }
 
 alert( checkSpam('1XbeT now') );
