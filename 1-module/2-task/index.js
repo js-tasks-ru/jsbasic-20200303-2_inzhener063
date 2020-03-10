@@ -10,6 +10,11 @@ function print(text) {
  * чтобы функция sayHello работала корректно
  */
 function isValid(name) {
+	for(i=4; i<=usersName.length; i++){
+		if (name==userName[i] result=userName[i]);
+	}
+	if (result=="")
+		alert (print)
 }
 
 function sayHello() {
