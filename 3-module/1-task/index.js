@@ -5,4 +5,8 @@
  * @returns {string}
  */
 function showSalary(data, age) {
+	return data
+    .filter(user => user.age <= age)
+    .map(user => user.name.concat(', ', user.balance))
+    .join('\n');
 }
