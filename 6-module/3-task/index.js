@@ -26,6 +26,36 @@ class Menu {
   `;
 
   constructor(element) {
+    this.el = element;
+
+    this.parseStructure(element);
+    this.subMenu(element);
+  }
+
+  parseStructure(element) {
+    let template = this.template;
+
+    element.innerHTML = template;
+  }
+
+  subMenu(element) {
+    let menuContainer = element.querySelector('.list-group');
+    let overlay = document.querySelector('.backdrop');
+
+    for (let i = 0; i < menuContainer.children.length; i++) {
+      let item = menuContainer.children[i];
+      let menuDropDown = menuContainer.children[i].querySelector('.dropdown-menu');
+
+      item.onpointerenter = () => {
+       menuDropDown.classList.add('show');
+       overlay.classList.add('show');
+      };
+
+      item.onpointerleave = () => {
+        menuDropDown.classList.remove('show');
+        overlay.classList.remove('show');
+      };
+    }
   }
 }
 
